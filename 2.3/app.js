@@ -2,6 +2,9 @@ let titleProject = prompt('Название проекта?');
 let screensValue = prompt('Типы экранов: шаблонные, с уникальным дизайном, с анимациями');
 let responsive = prompt('Нужен ли респонсивный сайт? (да/нет)');
 
+let screenPrice = 1000;
+let percentage = 15;
+
 if (responsive == 'да') {
     responsive = true
 } 
@@ -13,7 +16,8 @@ let service1 = prompt('Какой сервис нужен?');
 let servicePrice1 = +prompt('Сколько это будет стоить?');
 let service2 = prompt('Какой еще сервис тебе нужен?');
 let servicePrice2 = +prompt('Сколько будет стоить этот второй сервис?');
-let fullPrice = servicePrice1 + servicePrice2
+let fullPrice = servicePrice1 + servicePrice2 + screenPrice
+let servicePercentPrice = fullPrice - (fullPrice * (percentage/100))
 
 if (fullPrice > 50000) {
     alert('Cделаем скидку 10%')
@@ -42,9 +46,12 @@ else if (fullPrice < 0) {
 
 console.log(titleProject);
 console.log(screensValue);
+console.log(screenPrice);
+console.log(percentage);
 console.log(responsive);
 console.log(service1);
 console.log(servicePrice1);
 console.log(service2);
 console.log(servicePrice2);
 console.log(fullPrice);
+console.log(servicePercentPrice)
