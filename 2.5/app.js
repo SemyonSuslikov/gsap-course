@@ -15,9 +15,9 @@ let rollBackMessage;
 
 
 const asking = function() {
-    titleProject = prompt('Название проекта?');
-    screensValue = prompt('Типы экранов: шаблонные, с уникальным дизайном, с анимациями');
-    responsive = prompt('Нужен ли респонсивный сайт? (да/нет)');
+    titleProject = prompt('Название проекта?', 'КальКУлЯтор');
+    screensValue = prompt('Типы экранов: шаблонные, с уникальным дизайном, с анимациями', 'с уникальным дизайном');
+    responsive = prompt('Нужен ли респонсивный сайт?', 'Нужен');
 }
 
 
@@ -114,16 +114,13 @@ fullPrice = getFullPrice();
 newTitle = getTitle();
 servicePercentPrice = getServicePercentPrices();
 rollBackMessage = getRollbackMessage();
-responsive = (responsive === 'да');
 
 
-console.log(titleProject);
+console.log(newTitle, 'отформатированное название');
 console.log(screensValue);
 console.log(screenPrice);
 console.log(percentage);
 console.log(responsive);
-console.log(fullPrice);
-console.log(servicePercentPrice);
 console.log(allServicePrices, 'сумма всех доп услуг');
 console.log(fullPrice, 'сумма проекта + всех доп услуг');
 console.log(newTitle, 'отформатированное название');
